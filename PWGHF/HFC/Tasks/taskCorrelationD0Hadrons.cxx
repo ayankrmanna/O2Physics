@@ -172,7 +172,7 @@ struct HfTaskCorrelationD0Hadrons {
     registry.add("hDeltaEtaPtIntSidebands", "D0-h deltaEta sidebands", {HistType::kTH1F, {axisDeltaEta}});
     registry.add("hDeltaPhiPtIntSidebands", "D0-h deltaPhi sidebands", {HistType::kTH1F, {axisDeltaPhi}});
     registry.add("hCorrel2DPtIntSidebands", "D0-h deltaPhi vs deltaEta sidebands", {HistType::kTH2F, {{axisDeltaPhi}, {axisDeltaEta}}});
-    registry.add("hCorrel2DVsPtSidebands", "D0-h correlations sidebands", {HistType::kTHnSparseD, {{axisDeltaPhi}, {axisDeltaEta}, {axisPtD}, {axisPtHadron}, {axisPoolBin},{axisCentFT0M}}});
+    registry.add("hCorrel2DVsPtSidebands", "D0-h correlations sidebands", {HistType::kTHnSparseD, {{axisDeltaPhi}, {axisDeltaEta}, {axisPtD}, {axisPtHadron}, {axisPoolBin}, {axisCentFT0M}}});
     registry.add("hDeltaEtaPtIntSidebandsSoftPi", "D0-h deltaEta sidebands soft pi only", {HistType::kTH1F, {axisDeltaEta}});
     registry.add("hDeltaPhiPtIntSidebandsSoftPi", "D0-h deltaPhi sidebands soft pi only", {HistType::kTH1F, {axisDeltaPhi}});
     registry.add("hCorrel2DPtIntSidebandsSoftPi", "D0-h deltaPhi vs deltaEta sidebands soft pi only", {HistType::kTH2F, {{axisDeltaPhi}, {axisDeltaEta}}});
@@ -327,7 +327,7 @@ struct HfTaskCorrelationD0Hadrons {
       float cent = 0.;
       if (useCentrality) {
         cent = pairEntry.cent();
-      }      
+      }
       // define variables for widely used quantities
       double const deltaPhi = pairEntry.deltaPhi();
       double const deltaEta = pairEntry.deltaEta();
